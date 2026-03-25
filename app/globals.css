@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7fafc;
+  --foreground: #0f172a;
+
+  --primary: #0f7edb;
+  --primary-2: #12b5e5;
+  --dark: #1e293b;
+  --muted: #64748b;
+  --card: rgba(255, 255, 255, 0.75);
+  --border: rgba(148, 163, 184, 0.18);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(18, 181, 229, 0.16), transparent 30%),
+    radial-gradient(circle at top right, rgba(15, 126, 219, 0.14), transparent 28%),
+    linear-gradient(to bottom, #f8fbff, #eef6ff);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-container {
+  @apply max-w-7xl mx-auto px-6 md:px-10;
+}
+
+.glass-card {
+  background: var(--card);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #12b5e5, #0f7edb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-button {
+  background: linear-gradient(90deg, #12b5e5, #0f7edb);
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(15, 126, 219, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 126, 219, 0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
