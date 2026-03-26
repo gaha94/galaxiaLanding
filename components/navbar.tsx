@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 export default function Navbar() {
   return (
     <motion.header
-      initial={{ y: -30, opacity: 0 }}
+      initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="sticky top-0 z-50 border-b border-white/20 bg-white/60 backdrop-blur-xl"
+      className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/45 backdrop-blur-xl"
     >
       <div className="section-container flex h-20 items-center justify-between">
         <a href="#inicio" className="flex items-center gap-3">
@@ -21,23 +21,23 @@ export default function Navbar() {
             className="h-12 w-12 object-contain"
           />
           <div>
-            <p className="text-lg font-extrabold tracking-wide text-slate-800">
+            <p className="text-lg font-extrabold tracking-wide text-white">
               GALAXIA
             </p>
-            <p className="text-xs tracking-[0.25em] text-slate-500">
+            <p className="text-xs tracking-[0.25em] text-slate-300">
               SOFTWARE SAC
             </p>
           </div>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
-          <a href="#servicios" className="text-sm font-medium text-slate-700 hover:text-sky-600">
+          <a href="#servicios" className="text-sm font-medium text-slate-200 hover:text-sky-300">
             Servicios
           </a>
-          <a href="#beneficios" className="text-sm font-medium text-slate-700 hover:text-sky-600">
-            Beneficios
+          <a href="#estadisticas" className="text-sm font-medium text-slate-200 hover:text-sky-300">
+            Resultados
           </a>
-          <a href="#contacto" className="text-sm font-medium text-slate-700 hover:text-sky-600">
+          <a href="#contacto" className="text-sm font-medium text-slate-200 hover:text-sky-300">
             Contacto
           </a>
         </nav>

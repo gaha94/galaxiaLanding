@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
 
 const benefits = [
-  "Mejora la imagen digital de tu empresa",
-  "Automatiza procesos y reduce errores manuales",
-  "Aumenta tus oportunidades de venta",
-  "Centraliza información y operaciones",
-  "Ofrece una mejor experiencia a tus clientes",
-  "Desarrollos adaptados a la necesidad del negocio",
+  "Mejora la presencia digital de tu empresa",
+  "Automatiza procesos y reduce tareas repetitivas",
+  "Centraliza ventas, gestión y operaciones",
+  "Brinda una experiencia más moderna a tus clientes",
+  "Escala con herramientas adaptadas a tu negocio",
+  "Combina diseño visual con funcionalidad real",
 ];
 
 export default function Benefits() {
   return (
-    <section id="beneficios" className="py-24">
+    <section className="py-24">
       <div className="section-container grid gap-10 md:grid-cols-2 md:items-center">
         <motion.div
           initial={{ opacity: 0, x: -25 }}
@@ -22,16 +22,14 @@ export default function Benefits() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-sky-600">
-            Beneficios
-          </p>
-          <h2 className="text-3xl font-black text-slate-900 md:text-5xl">
-            Tecnología pensada para crecer contigo
+          <p className="section-subtitle">Beneficios</p>
+          <h2 className="section-title">
+            Más que software: una base digital para crecer
           </h2>
-          <p className="mt-6 max-w-xl text-lg leading-8 text-slate-600">
-            No solo desarrollamos software. Creamos herramientas visuales,
-            funcionales y estratégicas para que tu empresa venda mejor, administre
-            mejor y avance con una base tecnológica sólida.
+          <p className="mt-6 section-text">
+            Creamos experiencias digitales que ayudan a tu empresa a verse mejor,
+            vender mejor y administrar mejor. Todo con una imagen moderna y una
+            estructura tecnológica sólida.
           </p>
         </motion.div>
 
@@ -46,10 +44,10 @@ export default function Benefits() {
             {benefits.map((benefit) => (
               <div
                 key={benefit}
-                className="flex items-start gap-3 rounded-2xl border border-white/40 bg-white/60 p-4"
+                className="flex items-start gap-3 rounded-3xl border border-white/8 bg-white/5 p-4"
               >
-                <CheckCircle2 className="mt-0.5 shrink-0 text-sky-600" size={22} />
-                <p className="text-slate-700">{benefit}</p>
+                <CheckCircle2 className="mt-0.5 shrink-0 text-sky-300" size={22} />
+                <p className="text-slate-200">{benefit}</p>
               </div>
             ))}
           </div>

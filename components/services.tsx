@@ -1,26 +1,26 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MonitorCog, Globe, ShoppingBag } from "lucide-react";
+import { MonitorCog, Globe, ShoppingBag, ArrowUpRight } from "lucide-react";
 
 const services = [
   {
     icon: MonitorCog,
     title: "Software contable y administrativo",
     description:
-      "Optimiza la gestión de tu empresa con herramientas de escritorio robustas, confiables y orientadas al control total de tus operaciones.",
+      "Gestiona inventario, operaciones y procesos internos con herramientas robustas, confiables y orientadas al control empresarial.",
   },
   {
     icon: Globe,
     title: "Toma de pedidos web",
     description:
-      "Permite que tus clientes o vendedores registren pedidos desde cualquier lugar con una plataforma web rápida, intuitiva y disponible todo el tiempo.",
+      "Recibe pedidos desde cualquier lugar con plataformas web ágiles, intuitivas y pensadas para mejorar la atención y la velocidad comercial.",
   },
   {
     icon: ShoppingBag,
     title: "Tiendas virtuales",
     description:
-      "Lleva tu negocio a internet con una tienda moderna, profesional y diseñada para vender más, mostrar mejor tus productos y fortalecer tu marca.",
+      "Lleva tu negocio al entorno digital con una tienda moderna, profesional y preparada para convertir visitas en ventas.",
   },
 ];
 
@@ -29,11 +29,9 @@ export default function Services() {
     <section id="servicios" className="py-24">
       <div className="section-container">
         <div className="mx-auto mb-14 max-w-2xl text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-sky-600">
-            Nuestros servicios
-          </p>
-          <h2 className="text-3xl font-black text-slate-900 md:text-5xl">
-            Soluciones que conectan tu negocio con el futuro
+          <p className="section-subtitle">Nuestros servicios</p>
+          <h2 className="section-title">
+            Soluciones elegantes, visuales y enfocadas en resultados
           </h2>
         </div>
 
@@ -47,18 +45,21 @@ export default function Services() {
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="glass-card rounded-[2rem] p-8"
+                transition={{ duration: 0.55, delay: index * 0.1 }}
+                className="group glass-card rounded-[2rem] p-8 transition duration-300 hover:-translate-y-2 hover:border-sky-300/25"
               >
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-lg">
-                  <Icon size={30} />
+                <div className="mb-6 flex items-center justify-between">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-400 to-blue-700 text-white shadow-lg">
+                    <Icon size={30} />
+                  </div>
+                  <ArrowUpRight className="text-slate-400 transition group-hover:text-sky-300" />
                 </div>
 
-                <h3 className="mb-4 text-2xl font-bold text-slate-900">
+                <h3 className="mb-4 text-2xl font-bold text-white">
                   {service.title}
                 </h3>
 
-                <p className="leading-7 text-slate-600">
+                <p className="leading-7 text-slate-300">
                   {service.description}
                 </p>
               </motion.div>
